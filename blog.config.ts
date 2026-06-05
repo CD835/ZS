@@ -7,7 +7,7 @@ const basicConfig = {
 	description: '我的个人博客，分享技术与生活。',
 	author: {
 		name: '我',
-		avatar: '/avatar.png',
+		avatar: '/累了.jpg',
 		email: '1348469285@qq.com',
 		homepage: 'https://github.com/CD835/ZS.git',
 	},
@@ -16,7 +16,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://github.com/CD835/ZS.git',
 	},
-	favicon: '/favicon.ico',
+	favicon: '/累了.jpg',
 	language: 'zh-CN',
 	timeEstablished: '2026-06-05',
 	timeZone: 'Asia/Shanghai',
