@@ -16,7 +16,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://github.com/CD835/ZS.git',
 	},
-	favicon: '/累了.jpg',
+	favicon: 'favicon.png',
 	language: 'zh-CN',
 	timeEstablished: '2026-06-05',
 	timeZone: 'Asia/Shanghai',
