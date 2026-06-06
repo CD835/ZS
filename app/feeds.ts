@@ -22,7 +22,17 @@ export default [
 		desc: '哔——啵——电波通讯中，欢迎常来串门。',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
-			/* ========从此处新增友链======== */
+			{
+				author: '康可',
+				sitenick: '康可',
+				title: '康可ing',
+				desc: 'conquer,conquer,conquer...',
+				link: 'https://blog.yanxisishi.top/',
+				icon: 'https://q1.qlogo.cn/g?b=qq&nk=3497863696&s=640',
+				avatar: 'https://q1.qlogo.cn/g?b=qq&nk=3497863696&s=640',
+				date: '2026-06-06',
+				comment: '大佬',
+			},
 		],
 	},
 	// #endregion
