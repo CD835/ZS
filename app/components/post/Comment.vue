@@ -62,7 +62,7 @@ onMounted(() => {
 	script.setAttribute('data-reactions-enabled', '1')
 	script.setAttribute('data-emit-metadata', '0')
 	script.setAttribute('data-input-position', 'bottom')
-	script.setAttribute('data-theme', colorMode.preference === 'dark' ? 'dark' : 'light')
+	script.setAttribute('data-theme', colorMode.value === 'dark' ? 'dark' : 'light')
 	script.setAttribute('data-lang', 'zh-CN')
 	script.setAttribute('crossorigin', 'anonymous')
 	script.async = true
@@ -72,7 +72,7 @@ onMounted(() => {
 		giscusDiv.appendChild(script)
 })
 
-watch(() => colorMode.preference, (theme) => {
+watch(() => colorMode.value, (theme) => {
 	const iframe = document.querySelector<HTMLIFrameElement>('.giscus-frame')
 	if (!iframe)
 		return
