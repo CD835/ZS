@@ -1,3 +1,9 @@
+---
+title: HTML
+date: 2026-06-08 10:00:00
+categories: [网安基础]
+---
+
 [TOC]
 
 
@@ -386,6 +392,3 @@ textarea ：文本域
   <textarea></textarea>
 </body>
 ```
-
-
-

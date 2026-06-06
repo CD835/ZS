@@ -1,3 +1,9 @@
+---
+title: JavaScript基础
+date: 2026-06-10 10:00:00
+categories: [网安基础]
+---
+
 [TOC]
 
 
@@ -462,6 +468,3 @@ console.log(arr.length);
     console.log(a===b); //值和类型都相等就会相等  false
 </script>
 ```
-
-
-

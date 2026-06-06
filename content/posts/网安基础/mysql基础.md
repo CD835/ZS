@@ -1,3 +1,9 @@
+---
+title: MySQL基础
+date: 2026-06-14 10:00:00
+categories: [网安基础]
+---
+
 [TOC]
 
 
@@ -279,4 +285,3 @@ delete from stu1 where name = '李四';
 delete from stu1; -- 慎用! 
 
 ```
-

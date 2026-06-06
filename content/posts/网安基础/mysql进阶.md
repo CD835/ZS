@@ -1,3 +1,9 @@
+---
+title: MySQL进阶
+date: 2026-06-15 10:00:00
+categories: [网安基础]
+---
+
 [TOC]
 
 注：3（not），4(order)，7(limit)，9(union)较重要
@@ -383,10 +389,3 @@ UNION是一种用于合并两个或多个SELECT语句结果集的操作符（合
 ```mysql
 SELECT id, name, age FROM user1 UNION SELECT id, name, age FROM user2;
 ```
-
-
-
-
-
-
-
