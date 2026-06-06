@@ -89,6 +89,7 @@ export default defineNuxtConfig({
 		'/atom.xml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
 		'/favicon.ico': { redirect: { to: blogConfig.favicon } },
 		'/zhilu.opml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
+'/raw/**': { prerender: false },
 	},
 
 	runtimeConfig: {
