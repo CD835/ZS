@@ -1,0 +1,10 @@
+{
+  "name": "twikoo-netlify",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "twikoo-server"
+  },
+  "dependencies": {
+    "twikoo-netlify": "latest"
+  }
+}

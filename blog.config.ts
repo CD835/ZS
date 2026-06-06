@@ -16,7 +16,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://github.com/CD835/ZS.git',
 	},
-	favicon: 'favicon.png',
+	favicon: '/favicon.png',
 	language: 'zh-CN',
 	timeEstablished: '2026-06-05',
 	timeZone: 'Asia/Shanghai',
@@ -77,15 +77,8 @@ const blogConfig = {
 		// { 'src': 'https://your-umami.example.com/zhi.js', 'data-website-id': 'YOUR-ID', 'defer': true },
 		// Cloudflare Insights 统计服务（请替换为你的）
 		// { 'src': 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "YOUR-TOKEN"}', 'defer': true },
-		// Twikoo 评论系统
-		// { src: 'https://lib.baomitu.com/twikoo/1.6.44/twikoo.min.js', defer: true },
 	],
 
-	/** 自己部署的 Twikoo 服务（请替换为你的） */
-	twikoo: {
-		envId: '',
-		preload: '',
-	},
 }
 
 /** 用于生成 OPML 和友链页面配置 */
