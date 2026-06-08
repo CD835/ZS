@@ -16,7 +16,6 @@ function pluginPath(path: string) {
 // 此处配置无需修改
 export default defineNuxtConfig({
 	app: {
-		baseURL: '/ZS/',
 		head: {
 			meta: [
 				{ name: 'author', content: [blogConfig.author.name, blogConfig.author.email].filter(Boolean).join(', ') },
