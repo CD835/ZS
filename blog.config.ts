@@ -20,7 +20,7 @@ const basicConfig = {
 	language: 'zh-CN',
 	timeEstablished: '2026-06-05',
 	timeZone: 'Asia/Shanghai',
-	url: 'https://cd835.github.io/ZS/',
+	url: 'https://cd835.github.io',
 	defaultCategory: '未分类',
 }
 

@@ -41,7 +41,7 @@ export default defineEventHandler(async (event) => {
 
 		// 文章/总字数计数
 		stats.total.posts++
-		stats.total.words += post.readingTime.words
+		stats.total.words += post.readingTime?.words ?? 0
 
 		// 年文章/年字数计数
 		try {
@@ -51,7 +51,7 @@ export default defineEventHandler(async (event) => {
 			}
 
 			stats.annual[year].posts++
-			stats.annual[year].words += post.readingTime.words
+			stats.annual[year].words += post.readingTime?.words ?? 0
 		}
 		catch (e) {
 			console.warn(`${post.path} 文章日期${post.date ? '格式错误' : '为空'}: ${e}`)
