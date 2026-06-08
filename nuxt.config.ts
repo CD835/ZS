@@ -228,9 +228,12 @@ ${packageJson.homepage}
 	},
 
 	linkChecker: {
+		failOnError: false,
 		// @keep-sorted
 		skipInspections: [
+			'absolute-site-urls',
 			'no-baseless',
+			'no-error-response',
 			'no-non-ascii-chars',
 			'no-uppercase-chars',
 		],

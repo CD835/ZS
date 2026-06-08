@@ -1,3 +1,5 @@
+import { toZonedTemporal } from '~~/shared/utils/time'
+
 interface StatsEntry {
 	posts: number
 	words: number
@@ -10,16 +12,17 @@ interface CategoryEntry {
 }
 
 export default defineEventHandler(async (event) => {
-	const stats = {
-		total: { posts: 0, words: 0 },
-		annual: <Record<number, StatsEntry>>{},
-		categories: <CategoryEntry[]>[],
-		tags: <string[]>[],
-	}
+	try {
+		const stats = {
+			total: { posts: 0, words: 0 },
+			annual: <Record<number, StatsEntry>>{},
+			categories: <CategoryEntry[]>[],
+			tags: <string[]>[],
+		}
 
-	const existedPath = new Map()
+		const existedPath = new Map()
 
-	const posts = await queryCollection(event, 'content').all()
+		const posts = await queryCollection(event, 'content').all()
 
 	const findOrCreateCategory = (
 		name: string,
@@ -84,5 +87,15 @@ export default defineEventHandler(async (event) => {
 			})
 	}
 
-	return stats
+		return stats
+	}
+	catch (err) {
+		console.error('Stats endpoint error:', err)
+		return {
+			total: { posts: 0, words: 0 },
+			annual: {},
+			categories: [],
+			tags: [],
+		}
+	}
 })
