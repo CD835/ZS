@@ -222,9 +222,9 @@ ${packageJson.homepage}
 		// 尽量以这些密度点对点显示
 		densities: [1, 1.5, 2],
 		format: ['avif', 'webp'],
-		// Neylify 下 netlify 处理器无法显示站外图片，ipx 处理器无法显示站内图片，需彻底禁用
+		// GitHub Pages / Netlify 下 IPX 无法正确处理 baseURL 图片路径，需禁用
 		// https://github.com/nuxt/image/issues/1353
-		provider: NETLIFY ? 'none' : undefined,
+		provider: (NETLIFY || GITHUB_ACTIONS) ? 'none' : undefined,
 	},
 
 	linkChecker: {
