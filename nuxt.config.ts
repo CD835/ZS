@@ -224,7 +224,13 @@ ${packageJson.homepage}
 		format: ['avif', 'webp'],
 		// GitHub Pages / Netlify 下 IPX 无法正确处理 baseURL 图片路径，需禁用
 		// https://github.com/nuxt/image/issues/1353
-		provider: (NETLIFY || GITHUB_ACTIONS) ? 'none' : undefined,
+		provider: NETLIFY ? 'none' : undefined,
+		// GitHub Pages baseURL 导致 IPX 路径重复拼接 /ZS/，通过别名映射修复
+		ipx: GITHUB_ACTIONS ? {
+			alias: {
+				'ZS/images': 'images',
+			},
+		} : undefined,
 	},
 
 	linkChecker: {
