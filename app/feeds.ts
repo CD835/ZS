@@ -33,6 +33,17 @@ export default [
 				date: '2026-06-06',
 				comment: '大佬',
 			},
+			{
+				author: 'HACKED',
+				sitenick: 'HACKED',
+				title: 'ss0t_HACKED',
+				desc: '一个刚刚入门的pwner，大手子ddw',
+				link: 'https://blog.ss0t-hacked.top',
+				icon: 'https://q1.qlogo.cn/g?b=qq&nk=3255154997&s=640',
+				avatar: 'https://q1.qlogo.cn/g?b=qq&nk=3255154997&s=640',
+				date: '2026-06-09',
+				comment: '大佬',
+			},
 		],
 	},
 	// #endregion
