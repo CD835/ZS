@@ -10,7 +10,7 @@ import packageJson from './package.json'
 import redirectList from './redirects.json'
 
 function pluginPath(path: string) {
-	return pathToFileURL(resolve(`./remark-plugins/${path}.ts`)).href
+	return pathToFileURL(resolve(`./remark-plugins/${path}.mjs`)).href
 }
 
 // 此处配置无需修改
