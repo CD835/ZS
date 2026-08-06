@@ -7,8 +7,8 @@ import { getFavicon, getGithubAvatar, getGithubIcon, getOciqGroupAvatar, getOicq
 export default [
 	// #region Clarity
 	{
-		name: '清晰体验',
-		desc: '使用 Clarity 博客主题构建的网站。',
+		name: '菜狗',
+		desc: '一个真正的man',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			myFeed,
@@ -16,10 +16,10 @@ export default [
 		],
 	},
 	// #endregion
-	// #region 网上邻居
+	// #region 邻居
 	{
-		name: '网上邻居',
-		desc: '哔——啵——电波通讯中，欢迎常来串门。',
+		name: '邻居',
+		desc: '众星群聚',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
@@ -31,7 +31,7 @@ export default [
 				icon: 'https://q1.qlogo.cn/g?b=qq&nk=3497863696&s=640',
 				avatar: 'https://q1.qlogo.cn/g?b=qq&nk=3497863696&s=640',
 				date: '2026-06-06',
-				comment: '大佬',
+				comment: 'web大佬',
 			},
 			{
 				author: 'HACKED',
@@ -42,25 +42,68 @@ export default [
 				icon: 'https://q1.qlogo.cn/g?b=qq&nk=3255154997&s=640',
 				avatar: 'https://q1.qlogo.cn/g?b=qq&nk=3255154997&s=640',
 				date: '2026-06-09',
-				comment: '大佬',
+				comment: 'pwn大佬',
 			},
 		],
 	},
 	// #endregion
-	// #region 知识分享
+	// #region 真正的大佬
 	{
-		name: '知识分享',
+		name: '真正的大佬',
 		desc: '"AI时代"创作分享/知识内容收集。',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
-			/* ========从此处新增友链======== */
+			{
+				author: '叁玖',
+				sitenick: '叁玖',
+				title: '叁玖-blog',
+				desc: 'We will all move forward.',
+				link: 'https://www.sanjiuctf.com/?p=3573',
+				icon: 'https://www.sanjiuctf.com/wp-content/uploads/2025/09/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250526120834.jpg',
+				avatar: 'https://www.sanjiuctf.com/wp-content/uploads/2025/09/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250526120834.jpg',
+				date: '2026-08-07',
+				comment: '网安大佬',
+			},
+			{
+				author: 'chen7chen',
+				sitenick: 'chen7chen',
+				title: '小chen妙妙屋',
+				desc: 'chen7chen',
+				link: 'https://blog.xchstudy.org/',
+				icon: 'https://blog.xchstudy.org/img/images.webp',
+				avatar: 'https://blog.xchstudy.org/img/images.webp',
+				date: '2026-08-07',
+				comment: '大佬中的大佬',
+			},
+			{
+				author: 'zsm',
+				sitenick: 'zsm',
+				title: "Zsm's blog",
+				desc: 'Time can create anything',
+				link: 'https://www.zhuangsanmeng.xyz/',
+				icon: 'https://www.zhuangsanmeng.xyz/about/',
+				avatar: 'https://www.zhuangsanmeng.xyz/about/',
+				date: '2026-08-07',
+				comment: '久经沙场的大佬',
+			},
+			{
+				author: 'Spring',
+				sitenick: 'Spring',
+				title: 'Spring的储藏室',
+				desc: '”若有一天你会离开…”',
+				link: 'https://www.springbot.top/',
+				icon: 'https://www.springbot.top/wp-content/uploads/2025/11/小然招手.jpg',
+				avatar: 'https://www.springbot.top/wp-content/uploads/2025/11/小然招手.jpg',
+				date: '2026-08-07',
+				comment: '全栈大佬',
+			},
 		],
 	},
 	// #endregion
-	// #region 漫游
+	// #region 小南梁
 	{
-		name: '漫游',
-		desc: '网上冲浪时发现的精彩内容与常读订阅，与君共享。',
+		name: '小南梁',
+		desc: 'xnn友链快',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			/* ========从此处新增友链======== */
