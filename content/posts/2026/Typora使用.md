@@ -4,7 +4,7 @@ date: 2026-08-08 04:00:00
 categories: [Typora]
 tags: [Typora, 教程]
 image: "https://img2024.cnblogs.com/blog/3838669/202608/3838669-20260808041740876-1862214105.jpg"
-recommend: 4
+recommend: 3
 permalink: /2026/typora-guide
 ---
 
