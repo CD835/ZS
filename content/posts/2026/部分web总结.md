@@ -5,7 +5,7 @@ categories: [web]       # ← 文章分类
 tags: [Web安全]     # ← 标签
 image: "https://img2024.cnblogs.com/blog/3838669/202608/3838669-20260807235815632-742181194.jpg"
 recommend: 1
-permalink: /2026/web-security-summary
+permalink: /2026/web-partial-summary
 ---
 
 
