@@ -106,7 +106,28 @@ export default [
 		desc: 'xnn友链快',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
-			/* ========从此处新增友链======== */
+			{
+				author: 'A1right',
+				sitenick: 'A1right',
+				title: 'A1right的小窝',
+				desc: '你好，我是 A1right。这里记录 Web 安全、CTF 题解与 Agent 渗透实验。',
+				link: 'https://itsa1right.ink/',
+				icon: 'https://itsa1right.ink/images/a1right-avatar.png',
+				avatar: 'https://itsa1right.ink/images/a1right-avatar.png',
+				date: '2026-08-08',
+				comment: 'web,渗透,agent的xnn',
+			},
+			{
+				author: 'chzu老张的小白之路',
+				sitenick: 'chzu老张的小白之路',
+				title: 'chzu老张的小白之路',
+				desc: '记录学习网络安全之路，从入门到退出',
+				link: 'https://www.zjz946649.top/',
+				icon: 'https://www.zjz946649.top/_vercel/image?url=%2Favatar.jpg&w=1536&q=100',
+				avatar: 'https://www.zjz946649.top/_vercel/image?url=%2Favatar.jpg&w=1536&q=100',
+				date: '2026-08-08',
+				comment: '专注于web的xnn',
+			},
 		],
 	},
 	// #endregion
