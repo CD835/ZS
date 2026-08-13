@@ -55,6 +55,17 @@ export default [
 				date: '2026-08-11',
 				comment: '又一个全栈大佬',
 			},
+			{
+				author: '鳕鱼是人',
+				sitenick: '鳕鱼是人',
+				title: '鳕鱼是人',
+				desc: '心如止水',
+				link: 'https://blog.codsying.cn',
+				icon: 'https://img2024.cnblogs.com/blog/3838669/202608/3838669-20260814002058382-195679415.png',
+				avatar: 'https://img2024.cnblogs.com/blog/3838669/202608/3838669-20260814002058382-195679415.png',
+				date: '2026-08-14',
+				comment: '邻居',
+			},
 		],
 	},
 	// #endregion
