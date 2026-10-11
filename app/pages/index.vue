@@ -68,8 +68,6 @@ const { data: previewCount } = useAsyncData(
 		<ZPagination v-model="page" sticky avoid :total-pages="totalPages" />
 	</div>
 </UtilHydrateSafe>
-
-<ShareTools />
 </template>
 
 <style lang="scss" scoped>

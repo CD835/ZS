@@ -26,7 +26,7 @@ const groups = computed(() => {
 </script>
 
 <template>
-<section v-if="groups.length" class="share-tools">
+<section class="share-tools proper-height">
 	<h3 class="text-creative">
 		<Icon name="tabler:share-3" />
 		分享
@@ -36,51 +36,57 @@ const groups = computed(() => {
 		常用工具与虚拟机镜像，可单独下载。
 	</p>
 
-	<div v-for="[group, items] in groups" :key="group" class="share-group">
-		<h4 class="share-group-title">
-			{{ group }}
-		</h4>
-
-		<menu class="share-list">
-			<li v-for="item in items" :key="item.url" class="share-item card upraise">
-				<Icon class="share-icon" :name="item.icon || 'tabler:package'" />
-
-				<div class="share-info">
-					<div class="share-name">
-						{{ item.name }}
-						<span v-if="item.version" class="share-version">{{ item.version }}</span>
-					</div>
-
-					<p v-if="item.desc" class="share-desc">
-						{{ item.desc }}
-					</p>
-
-					<div v-if="item.size || item.code" class="share-meta">
-						<span v-if="item.size">
-							<Icon name="tabler:database" />{{ item.size }}
-						</span>
-						<span v-if="item.code">
-							<Icon name="tabler:key" />提取码 {{ item.code }}
-						</span>
-					</div>
-				</div>
-
-				<ZButton class="share-download" icon="tabler:download" text="下载" :to="resolveUrl(item.url)" />
-			</li>
-		</menu>
+	<div v-if="!groups.length" class="share-empty">
+		<Icon name="tabler:package" />
+		<p>工具还在上传中，敬请期待。</p>
 	</div>
+
+	<template v-else>
+		<div v-for="[group, items] in groups" :key="group" class="share-group">
+			<h4 class="share-group-title">
+				{{ group }}
+			</h4>
+
+			<menu class="share-list">
+				<li v-for="item in items" :key="item.url" class="share-item card upraise">
+					<Icon class="share-icon" :name="item.icon || 'tabler:package'" />
+
+					<div class="share-info">
+						<div class="share-name">
+							{{ item.name }}
+							<span v-if="item.version" class="share-version">{{ item.version }}</span>
+						</div>
+
+						<p v-if="item.desc" class="share-desc">
+							{{ item.desc }}
+						</p>
+
+						<div v-if="item.size || item.code" class="share-meta">
+							<span v-if="item.size">
+								<Icon name="tabler:database" />{{ item.size }}
+							</span>
+							<span v-if="item.code">
+								<Icon name="tabler:key" />提取码 {{ item.code }}
+							</span>
+						</div>
+					</div>
+
+					<ZButton class="share-download" icon="tabler:download" text="下载" :to="resolveUrl(item.url)" />
+				</li>
+			</menu>
+		</div>
+	</template>
 </section>
 </template>
 
 <style lang="scss" scoped>
 .share-tools {
-	margin: 3rem 1rem;
+	margin: 1rem;
 
 	> h3 {
 		display: flex;
 		gap: 0.3em;
 		align-items: center;
-		margin-top: 3rem;
 		font-size: 1.25rem;
 	}
 
@@ -88,6 +94,24 @@ const groups = computed(() => {
 		margin-top: 0.3em;
 		font-size: 0.85em;
 		color: var(--c-text-2);
+	}
+}
+
+.share-empty {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	align-items: center;
+	margin: 3em auto;
+	color: var(--c-text-3);
+
+	> .iconify {
+		font-size: 2.5em;
+		opacity: 0.5;
+	}
+
+	> p {
+		font-size: 0.9em;
 	}
 }
 

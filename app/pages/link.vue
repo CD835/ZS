@@ -57,8 +57,6 @@ const copyFields = {
 	</template>
 </Tab>
 
-<ShareTools />
-
 <PostComment />
 </template>
 
