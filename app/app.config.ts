@@ -97,6 +97,14 @@ export default defineAppConfig({
 		emojiTail: ['📄', '🦌', '🙌', '🐟', '🏖️'],
 	},
 
+	/** 友链爱心计数 */
+	like: {
+		/** 计数服务地址（Abacus 兼容接口，无需注册、无需邮箱）；留空则只在浏览器本地计数 */
+		api: 'https://abacus.jasoncameron.dev',
+		/** 计数命名空间，同一个博客内唯一即可 */
+		namespace: 'cd835-zs',
+	},
+
 	/** 友链页面 */
 	link: {
 		/** 无订阅源展示静音图标 */

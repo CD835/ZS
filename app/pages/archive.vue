@@ -122,6 +122,8 @@ function getArticleYear(article: ArticleProps) {
 		/>
 	</div>
 </div>
+
+<ShareTools />
 </template>
 
 <style lang="scss" scoped>

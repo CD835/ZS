@@ -103,6 +103,10 @@ if (import.meta.dev) {
 			flex-direction: column;
 			text-align: center;
 
+			.feed-link {
+				flex-direction: column;
+			}
+
 			.avatar.avatar {
 				margin: 0 0 0.2em;
 			}

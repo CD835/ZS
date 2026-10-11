@@ -13,6 +13,9 @@ const title = computed(() => props.title ?? props.sitenick ?? props.author)
 const domainTip = computed(() => getDomainType(getMainDomain(props.link, true)))
 const domainIcon = computed(() => getDomainIcon(props.link))
 
+// 爱心计数：以友链地址作为计数 key
+const { count, liked, busy, like } = useLike(() => props.link)
+
 function getInspectStyle(src: string): CSSProperties {
 	src = getMainDomain(src)
 	let color = 'red'
@@ -35,26 +38,41 @@ function getInspectStyle(src: string): CSSProperties {
 
 <template>
 <Tooltip :delay="200" interactive ^role="link" hide-on-click="toggle">
-	<UtilLink
-		class="feed-card gradient-card"
-		:to="error ? undefined : link"
-		rel="noopener"
-		:data-error="error"
-	>
-		<div class="avatar" :title="feed ? undefined : '无订阅源'">
-			<ClientOnly v-if="isInspect">
-				<span style="position: absolute; left: 100%; white-space: nowrap;" v-text="title" />
-				<NuxtImg :src="icon" :title="icon" :style="getInspectStyle(icon)" />
-				<NuxtImg :src="avatar" :title="avatar" :style="getInspectStyle(avatar)" />
-			</ClientOnly>
+	<div class="feed-card gradient-card" :data-error="error">
+		<UtilLink
+			class="feed-link"
+			:to="error ? undefined : link"
+			rel="noopener"
+		>
+			<div class="avatar" :title="feed ? undefined : '无订阅源'">
+				<ClientOnly v-if="isInspect">
+					<span style="position: absolute; left: 100%; white-space: nowrap;" v-text="title" />
+					<NuxtImg :src="icon" :title="icon" :style="getInspectStyle(icon)" />
+					<NuxtImg :src="avatar" :title="avatar" :style="getInspectStyle(avatar)" />
+				</ClientOnly>
 
-			<NuxtImg v-else class="round-cobblestone" :src="avatar" :alt="author" loading="lazy" />
-			<Icon v-if="appConfig.link.remindNoFeed && !feed" class="no-feed" name="tabler:bell-off" />
-		</div>
+				<NuxtImg v-else class="round-cobblestone" :src="avatar" :alt="author" loading="lazy" />
+				<Icon v-if="appConfig.link.remindNoFeed && !feed" class="no-feed" name="tabler:bell-off" />
+			</div>
 
-		<span class="author">{{ author }}</span>
-		<span class="sitenick">{{ sitenick }}</span>
-	</UtilLink>
+			<span class="author">{{ author }}</span>
+			<span class="sitenick">{{ sitenick }}</span>
+		</UtilLink>
+
+		<button
+			class="like"
+			:class="{ liked }"
+			type="button"
+			:disabled="busy"
+			:title="liked ? '已经赞过啦' : '点个赞'"
+			:aria-label="`给 ${author} 点赞`"
+			:aria-pressed="liked"
+			@click.prevent.stop="like"
+		>
+			<Icon :name="liked ? 'tabler:heart-filled' : 'tabler:heart'" />
+			<span v-if="typeof count === 'number'" class="like-count">{{ count }}</span>
+		</button>
+	</div>
 
 	<template #content>
 		<div class="site-content">
@@ -112,6 +130,14 @@ function getInspectStyle(src: string): CSSProperties {
 		cursor: not-allowed;
 	}
 
+	.feed-link {
+		display: flex;
+		flex: 1;
+		gap: 0.2em;
+		align-items: center;
+		min-width: 0;
+	}
+
 	.avatar {
 		position: relative;
 		margin: 0 0.5em 0 0;
@@ -145,6 +171,39 @@ function getInspectStyle(src: string): CSSProperties {
 	.no-feed {
 		opacity: 0.6;
 		font-size: 0.8em;
+	}
+
+	// 爱心点赞：不改变卡片原有排版，只在行尾追加
+	.like {
+		display: flex;
+		flex-shrink: 0;
+		gap: 0.15em;
+		align-items: center;
+		padding: 0.15em 0.3em;
+		border-radius: 0.6em;
+		font-size: 0.85em;
+		line-height: 1;
+		color: var(--c-text-3);
+		transition: color 0.2s, background-color 0.2s, transform 0.15s;
+
+		&:hover {
+			background-color: var(--c-bg-soft);
+			color: #ff6b81;
+		}
+
+		&:active {
+			transform: scale(0.88);
+		}
+
+		&.liked {
+			color: #ff6b81;
+		}
+
+		.like-count {
+			font-size: 0.9em;
+			font-variant-numeric: tabular-nums;
+			opacity: 0.8;
+		}
 	}
 }
 
