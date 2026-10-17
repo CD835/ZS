@@ -143,12 +143,22 @@ export default [
 	},
 	{
 		group: '安全与拦截',
-		name: 'Kaspersky',
-		desc: '卡巴斯基安装包（简体中文）。',
+		name: '卡巴斯基 免费版',
+		desc: '卡巴斯基免费版安装包（简体中文），基础防护。',
 		url: asset('kaspersky-21.27.6.532-zh-hans.exe'),
 		version: '21.27.6.532',
 		size: '6.71 MB',
 		icon: 'tabler:shield-lock',
+	},
+	{
+		// 这个安装包发布时的文件名是 startup.exe，实际是卡巴斯基标准版
+		group: '安全与拦截',
+		name: '卡巴斯基 标准版',
+		desc: '卡巴斯基标准版安装包（简体中文），功能比免费版更全。',
+		url: asset('startup.exe'),
+		version: '21.26.4.406',
+		size: '6.68 MB',
+		icon: 'tabler:shield-check',
 	},
 	{
 		group: '安全与拦截',
@@ -157,14 +167,6 @@ export default [
 		url: asset('adwcleaner.exe'),
 		size: '9.18 MB',
 		icon: 'tabler:sparkles',
-	},
-	{
-		group: '安全与拦截',
-		name: 'startup',
-		desc: '启动项与开机自启检测工具。',
-		url: asset('startup.exe'),
-		size: '6.68 MB',
-		icon: 'tabler:rocket',
 	},
 	// #endregion
 
