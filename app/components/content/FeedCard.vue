@@ -13,8 +13,8 @@ const title = computed(() => props.title ?? props.sitenick ?? props.author)
 const domainTip = computed(() => getDomainType(getMainDomain(props.link, true)))
 const domainIcon = computed(() => getDomainIcon(props.link))
 
-// 爱心计数：以友链地址作为计数 key
-const { count, liked, busy, like } = useLike(() => props.link)
+// 爱心计数：以友链地址作为计数 key，可重复点击取消
+const { count, liked, busy, toggle } = useLike(() => props.link)
 
 function getInspectStyle(src: string): CSSProperties {
 	src = getMainDomain(src)
@@ -64,10 +64,10 @@ function getInspectStyle(src: string): CSSProperties {
 			:class="{ liked }"
 			type="button"
 			:disabled="busy"
-			:title="liked ? '已经赞过啦' : '点个赞'"
-			:aria-label="`给 ${author} 点赞`"
+			:title="liked ? '点击取消点赞' : '点个赞'"
+			:aria-label="liked ? `取消给 ${author} 点赞` : `给 ${author} 点赞`"
 			:aria-pressed="liked"
-			@click.prevent.stop="like"
+			@click.prevent.stop="toggle"
 		>
 			<Icon :name="liked ? 'tabler:heart-filled' : 'tabler:heart'" />
 			<span v-if="typeof count === 'number'" class="like-count">{{ count }}</span>
