@@ -39,14 +39,6 @@ export default [
 	},
 	{
 		group: '卸载工具',
-		name: 'HiBit Uninstaller（已解压目录）',
-		desc: '直接解压出来的那份，含本地改动，按原样打包。',
-		url: asset('HiBitUninstaller-extracted.zip'),
-		size: '0.38 MB',
-		icon: 'tabler:folder',
-	},
-	{
-		group: '卸载工具',
 		name: 'BCUninstaller',
 		desc: '可按数字签名扫描已安装程序，批量卸载。',
 		url: asset('BCUninstaller-6.3.0-net8.zip'),
