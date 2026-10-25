@@ -1,5 +1,6 @@
 ---
 title: Typora
+description: 从 Markdown 全语法到 Typora 专属功能与快捷键速查，附 CTF 笔记实践和入门练习。
 date: 2026-08-08 04:00:00
 categories: [Typora]
 tags: [Typora, 教程]
@@ -7,6 +8,8 @@ image: "https://img2024.cnblogs.com/blog/3838669/202608/3838669-2026080804174087
 recommend: 3
 permalink: /2026/typora-guide
 ---
+
+从 Markdown 全语法到 Typora 专属功能与快捷键速查，附 CTF 笔记实践和入门练习。
 
 [TOC]
 

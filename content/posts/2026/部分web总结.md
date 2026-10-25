@@ -1,5 +1,6 @@
 ---
 title: web一部分总结
+description: Web 常见漏洞速查，覆盖信息收集、SQL 注入、CSRF/SSRF、文件上传与包含、XSS、RCE 和 PHP 反序列化。
 date: 2026-06-09 02:10:00
 categories: [web]       # ← 文章分类
 tags: [Web安全]     # ← 标签
@@ -8,7 +9,7 @@ recommend: 1
 permalink: /2026/web-partial-summary
 ---
 
-
+Web 常见漏洞速查，覆盖信息收集、SQL 注入、CSRF/SSRF、文件上传与包含、XSS、RCE 和 PHP 反序列化。
 
 # 总结：
 
